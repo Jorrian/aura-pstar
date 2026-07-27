@@ -30,6 +30,23 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  z-index: 10;
+  padding: 10px 14px;
+  transform: translateY(-150%);
+  border-radius: 0 0 10px 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .site-header,
 .site-footer {
   background: var(--surface);
@@ -59,6 +76,9 @@ a:focus-visible {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--text);
   font-weight: 750;
   text-decoration: none;
@@ -69,6 +89,13 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.nav-links a,
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .page {
@@ -123,7 +150,9 @@ h2 {
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin: 8px 12px 8px 0;
   padding: 11px 17px;
   border-radius: 999px;
@@ -174,6 +203,7 @@ li + li {
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
+    gap: 8px;
   }
 
   .page {
